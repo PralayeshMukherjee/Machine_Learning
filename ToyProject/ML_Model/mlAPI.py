@@ -26,3 +26,6 @@ def predict():
 # in the fourth line I convert the input data into a numpy array and reshape it to match the input format expected by the model
 # in fifth line I use the loaded model to make a prediction based on the iput features
 # in the last line I return the prediction result as a json response
+
+if __name__ == '__main__':
+    app.run(port=7000,debug=True);
