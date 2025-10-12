@@ -10,13 +10,15 @@ public class PredictionService {
         PredictionRequestDTO predictionRequestDTO = new PredictionRequestDTO(iq,cgpa);
         String url = "http://localhost:5000";
         WebClient webClient = WebClient.create(url);
-        PredictionResponseDTO response = webClient.post()
-                .uri("/predict")
-                .contentType(MediaType.APPLICATION_JSON)
-                .bodyValue(predictionRequestDTO)
-                .retrieve()
-                .bodyToMono(PredictionResponseDTO.class)
-                .block();
-        return response.getPrediction();
+        try{
+            PredictionResponseDTO response = webClient.post()
+                    .uri("/predict")
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .bodyValue(predictionRequestDTO)
+                    .retrieve()
+                    .bodyToMono(PredictionResponseDTO.class)
+                    .block();
+            return response.getPrediction();
+        }
     }
 }
