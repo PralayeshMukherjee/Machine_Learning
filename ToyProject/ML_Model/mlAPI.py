@@ -15,8 +15,8 @@ with open('model.pkl','rb') as file:
 @app.route('/predict',methods=['POST'])
 def predict():
     data = request.get_json();
-    iq = data.get('iq')
-    cgpa = data.get('cgpa')
+    iq = float(data.get('iq'));
+    cgpa = float(data.get('cgpa'))
     features = np.array([[iq,cgpa]]);
     prediction = model.predict(features);
     return jsonify({'prediction' : int(prediction[0])});
@@ -28,4 +28,4 @@ def predict():
 # in the last line I return the prediction result as a json response
 
 if __name__ == '__main__':
-    app.run(port=7000,debug=True);
+    app.run(host='localhost',port=7000,debug=True);
