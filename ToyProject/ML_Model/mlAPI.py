@@ -4,7 +4,7 @@ import numpy as np;
 from flask_cors import CORS;
 
 app = Flask(__name__);# creatae the instance of the flask web appliction object
-
+CORS(app);# enable CORS for the Flask app
 # load the model
 with open('model.pkl','rb') as file:
     model = pickle.load(file);
