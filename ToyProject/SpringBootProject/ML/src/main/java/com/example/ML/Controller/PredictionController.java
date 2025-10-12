@@ -19,5 +19,6 @@ public class PredictionController {
         double iq = predictionRequestDTO.getIq();
         double cgpa = predictionRequestDTO.getCgpa();
         int response = predictionService.getPrediction(iq,cgpa);
+        return ResponseEntity.ok(Map.of("prediction",response));
     }
 }
