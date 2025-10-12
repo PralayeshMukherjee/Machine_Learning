@@ -6,4 +6,7 @@ public class PredictionResponseDTO {
     public PredictionResponseDTO(int prediction) {
         this.prediction = prediction;
     }
+
+    public PredictionResponseDTO() {
+    }
 }
