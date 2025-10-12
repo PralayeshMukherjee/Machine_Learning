@@ -9,4 +9,12 @@ public class PredictionResponseDTO {
 
     public PredictionResponseDTO() {
     }
+
+    public int getPrediction() {
+        return prediction;
+    }
+
+    public void setPrediction(int prediction) {
+        this.prediction = prediction;
+    }
 }
