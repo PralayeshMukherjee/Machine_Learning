@@ -12,5 +12,6 @@ public class PredictionService {
         String response = webClient.post()
                 .uri("/predict")
                 .contentType(MediaType.APPLICATION_JSON)
+                .bodyValue(predictionRequestDTO)
     }
 }
