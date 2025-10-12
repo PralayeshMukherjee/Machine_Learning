@@ -3,8 +3,10 @@ package com.example.ML.Service;
 import com.example.ML.DTO.PredictionRequestDTO;
 import com.example.ML.DTO.PredictionResponseDTO;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
+@Service
 public class PredictionService {
     public int getPrediction(double iq,double cgpa){
         PredictionRequestDTO predictionRequestDTO = new PredictionRequestDTO(iq,cgpa);
