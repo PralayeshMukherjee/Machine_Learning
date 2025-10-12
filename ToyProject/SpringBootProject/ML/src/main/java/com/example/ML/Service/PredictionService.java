@@ -19,6 +19,9 @@ public class PredictionService {
                     .bodyToMono(PredictionResponseDTO.class)
                     .block();
             return response.getPrediction();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            return 0;
         }
     }
 }
