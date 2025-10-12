@@ -17,5 +17,6 @@ public class PredictionService {
                 .retrieve()
                 .bodyToMono(PredictionResponseDTO.class)
                 .block();
+        return response.getPrediction();
     }
 }
