@@ -11,4 +11,20 @@ public class PredictionRequestDTO {
         this.iq = iq;
         this.cgpa = cgpa;
     }
+
+    public double getIq() {
+        return iq;
+    }
+
+    public void setIq(double iq) {
+        this.iq = iq;
+    }
+
+    public double getCgpa() {
+        return cgpa;
+    }
+
+    public void setCgpa(double cgpa) {
+        this.cgpa = cgpa;
+    }
 }
