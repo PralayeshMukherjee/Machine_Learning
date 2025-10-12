@@ -16,6 +16,7 @@ public class PredictionController {
     @Autowired
     private PredictionService predictionService;
     public ResponseEntity<Map<String,Integer>> getPrediction(@RequestBody PredictionRequestDTO predictionRequestDTO){
-
+        double iq = predictionRequestDTO.getIq();
+        double cgpa = predictionRequestDTO.getCgpa();
     }
 }
