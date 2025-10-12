@@ -1,6 +1,7 @@
 package com.example.ML.Service;
 
 import com.example.ML.DTO.PredictionRequestDTO;
+import com.example.ML.DTO.PredictionResponseDTO;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -14,5 +15,6 @@ public class PredictionService {
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(predictionRequestDTO)
                 .retrieve()
+                .bodyToMono(PredictionResponseDTO.class)
     }
 }
