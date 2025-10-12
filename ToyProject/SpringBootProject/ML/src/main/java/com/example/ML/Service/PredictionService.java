@@ -10,11 +10,12 @@ public class PredictionService {
         PredictionRequestDTO predictionRequestDTO = new PredictionRequestDTO(iq,cgpa);
         String url = "http://localhost:5000";
         WebClient webClient = WebClient.create(url);
-        String response = webClient.post()
+        PredictionResponseDTO response = webClient.post()
                 .uri("/predict")
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(predictionRequestDTO)
                 .retrieve()
                 .bodyToMono(PredictionResponseDTO.class)
+                .block();
     }
 }
