@@ -18,8 +18,8 @@ public class PredictionController {
     private PredictionService predictionService;
     @PostMapping("/prediction")
     public ResponseEntity<Map<String,Integer>> getPrediction(@RequestBody PredictionRequestDTO predictionRequestDTO){
-        double iq = predictionRequestDTO.getIq();
-        double cgpa = predictionRequestDTO.getCgpa();
+        float iq = predictionRequestDTO.getIq();
+        float cgpa = predictionRequestDTO.getCgpa();
         int response = predictionService.getPrediction(iq,cgpa);
         return ResponseEntity.ok(Map.of("prediction",response));
     }

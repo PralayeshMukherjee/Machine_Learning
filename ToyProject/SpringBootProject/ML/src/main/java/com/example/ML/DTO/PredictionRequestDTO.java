@@ -1,30 +1,30 @@
 package com.example.ML.DTO;
 
 public class PredictionRequestDTO {
-    private double iq;
-    private double cgpa;
+    private float iq;
+    private float cgpa;
 
     public PredictionRequestDTO() {
     }
 
-    public PredictionRequestDTO(double iq, double cgpa) {
+    public PredictionRequestDTO(float iq, float cgpa) {
         this.iq = iq;
         this.cgpa = cgpa;
     }
 
-    public double getIq() {
+    public float getIq() {
         return iq;
     }
 
-    public void setIq(double iq) {
+    public void setIq(float iq) {
         this.iq = iq;
     }
 
-    public double getCgpa() {
+    public float getCgpa() {
         return cgpa;
     }
 
-    public void setCgpa(double cgpa) {
+    public void setCgpa(float cgpa) {
         this.cgpa = cgpa;
     }
 }

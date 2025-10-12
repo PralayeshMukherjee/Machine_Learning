@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 @Service
 public class PredictionService {
-    public int getPrediction(double iq,double cgpa){
+    public int getPrediction(float iq,float cgpa){
         PredictionRequestDTO predictionRequestDTO = new PredictionRequestDTO(iq,cgpa);
         String url = "http://localhost:5000";
         WebClient webClient = WebClient.create(url);
