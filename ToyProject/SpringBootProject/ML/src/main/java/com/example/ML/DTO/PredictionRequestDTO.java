@@ -6,4 +6,9 @@ public class PredictionRequestDTO {
 
     public PredictionRequestDTO() {
     }
+
+    public PredictionRequestDTO(double iq, double cgpa) {
+        this.iq = iq;
+        this.cgpa = cgpa;
+    }
 }
