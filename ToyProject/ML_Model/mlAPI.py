@@ -1,5 +1,6 @@
 from flask import Flask,request,jsonify;
 import pickle;
+import numpy as np;
 
 app = Flask(__name__);# creatae the instance of the flask web appliction object
 
@@ -19,8 +20,8 @@ def predict():
     prediction = model.predict(features);
     return jsonify({'prediction' : int(prediction[0])});
 #create a fucntion names predict 
-first line means it extracts a specific piece of information from the received data 
-second & third line I get the data fomr the json object and store it in local variables
-in the fourth line I convert the input data into a numpy array and reshape it to match the input format expected by the model
-in fifth line I use the loaded model to make a prediction based on the iput features
-in the last line I return the prediction result as a json response
+# first line means it extracts a specific piece of information from the received data 
+# second & third line I get the data fomr the json object and store it in local variables
+# in the fourth line I convert the input data into a numpy array and reshape it to match the input format expected by the model
+# in fifth line I use the loaded model to make a prediction based on the iput features
+# in the last line I return the prediction result as a json response
