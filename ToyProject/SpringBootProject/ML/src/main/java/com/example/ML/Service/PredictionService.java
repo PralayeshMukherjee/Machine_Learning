@@ -13,5 +13,6 @@ public class PredictionService {
                 .uri("/predict")
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(predictionRequestDTO)
+                .retrieve()
     }
 }
