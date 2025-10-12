@@ -8,7 +8,7 @@ function Predictor() {
 
   const handlePredict = async () => {
     try {
-      const res = await axios.post("http://localhost:8080/api/predict", {
+      const res = await axios.post("http://localhost:8080/api/prediction", {
         iq: parseFloat(iq),
         cgpa: parseFloat(cgpa),
       });
